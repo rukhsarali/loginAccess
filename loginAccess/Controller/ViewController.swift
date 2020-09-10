@@ -11,19 +11,24 @@ import FBSDKLoginKit
 class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+     // Do any additional setup after loading the view.
     }
     @IBAction func facebookLoginButton(_ sender: UIButton) {
         performLogin()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if AccessToken.current != nil{
+            print("AccessToken.current")
+            performSegue(withIdentifier: "goToResult", sender: self)
+        }
     }
 }
 //MARK: - facebook login method
 extension ViewController {
     func performLogin() {
         if AccessToken.current != nil{
-            // performSegue(withIdentifier: "goToResult", sender: self)
-            let pvc = storyboard?.instantiateViewController(identifier: "goToResult") as? ResultViewController
-            present(pvc!, animated: true, completion: nil)
+            print("AccessToken.current")
+             performSegue(withIdentifier: "goToResult", sender: self)
         }else {
             let manager = LoginManager()
             manager.logIn(permissions: [Permission.publicProfile], viewController: self) { (loginResult) in
@@ -35,14 +40,17 @@ extension ViewController {
                     break
                 case .success(granted: _, declined: _, token: _):
                     print("Logged in!")
-                    //self.performSegue(withIdentifier: "goToResult", sender: self)
+                  //  self.performSegue(withIdentifier: "goToResult", sender: self)
                     let pvc = self.storyboard?.instantiateViewController(identifier: "goToResult") as? ResultViewController
-                    self.present(pvc!, animated: true, completion: nil)
+                    self.present(pvc!, animated: false, completion: nil)
                 }
             }
         }
-        
     }
 }
 
 
+
+
+//            let pvc = storyboard?.instantiateViewController(identifier: "goToResult") as? ResultViewController
+//            present(pvc!, animated: true, completion: nil)
