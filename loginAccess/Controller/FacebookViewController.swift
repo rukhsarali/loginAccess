@@ -9,20 +9,23 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
-class ResultViewController: UIViewController {
+class FacebookViewController: UIViewController {
     
+    @IBOutlet weak var facebookLogOutOutlet: UIButton!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         dataGet()
+        facebookLogOutOutlet.layer.cornerRadius = 8
     }
+    //MARK: - facebook logOut button
     @IBAction func facebookLogOutButton(_ sender: UIButton) {
         dissmissMethod()
     }
 }
 //MARK: - get data from loggedIn ID and dissmiss method
-extension ResultViewController {
+extension FacebookViewController {
     func dissmissMethod(){
         if AccessToken.current != nil{
             AccessToken.current = nil

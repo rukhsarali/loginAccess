@@ -5,5 +5,5 @@ target 'loginAccess' do
   use_frameworks!
 
   pod 'FBSDKLoginKit'
-
+  pod 'GoogleSignIn'
 end

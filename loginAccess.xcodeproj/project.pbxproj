@@ -14,7 +14,9 @@
 		903CE46A2508E35300A4C6A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903CE4682508E35300A4C6A6 /* Main.storyboard */; };
 		903CE46C2508E35700A4C6A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 903CE46B2508E35700A4C6A6 /* Assets.xcassets */; };
 		903CE46F2508E35700A4C6A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903CE46D2508E35700A4C6A6 /* LaunchScreen.storyboard */; };
-		903CE4772508E53F00A4C6A6 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903CE4762508E53F00A4C6A6 /* ResultViewController.swift */; };
+		903CE4772508E53F00A4C6A6 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903CE4762508E53F00A4C6A6 /* FacebookViewController.swift */; };
+		90478F80250BA06400F86D26 /* GoogleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90478F7F250BA06400F86D26 /* GoogleViewController.swift */; };
+		90478F82250BB43B00F86D26 /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 90478F81250BB43B00F86D26 /* GoogleService-Info (2).plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,9 @@
 		903CE46B2508E35700A4C6A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		903CE46E2508E35700A4C6A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		903CE4702508E35700A4C6A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		903CE4762508E53F00A4C6A6 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		903CE4762508E53F00A4C6A6 /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
+		90478F7F250BA06400F86D26 /* GoogleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleViewController.swift; sourceTree = "<group>"; };
+		90478F81250BB43B00F86D26 /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				903CE4782508E55B00A4C6A6 /* Controller */,
 				903CE4792508E56900A4C6A6 /* View */,
 				903CE46B2508E35700A4C6A6 /* Assets.xcassets */,
+				90478F81250BB43B00F86D26 /* GoogleService-Info (2).plist */,
 				903CE46D2508E35700A4C6A6 /* LaunchScreen.storyboard */,
 				903CE4702508E35700A4C6A6 /* Info.plist */,
 			);
@@ -80,7 +85,8 @@
 			isa = PBXGroup;
 			children = (
 				903CE4662508E35300A4C6A6 /* ViewController.swift */,
-				903CE4762508E53F00A4C6A6 /* ResultViewController.swift */,
+				903CE4762508E53F00A4C6A6 /* FacebookViewController.swift */,
+				90478F7F250BA06400F86D26 /* GoogleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -122,6 +128,7 @@
 				903CE45C2508E35300A4C6A6 /* Frameworks */,
 				903CE45D2508E35300A4C6A6 /* Resources */,
 				4B11403A967F87A4F78F17F1 /* [CP] Embed Pods Frameworks */,
+				FF7A590EA0F48C67C2E98DD3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,6 +177,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90478F82250BB43B00F86D26 /* GoogleService-Info (2).plist in Resources */,
 				903CE46F2508E35700A4C6A6 /* LaunchScreen.storyboard in Resources */,
 				903CE46C2508E35700A4C6A6 /* Assets.xcassets in Resources */,
 				903CE46A2508E35300A4C6A6 /* Main.storyboard in Resources */,
@@ -218,6 +226,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-loginAccess/Pods-loginAccess-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FF7A590EA0F48C67C2E98DD3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-loginAccess/Pods-loginAccess-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-loginAccess/Pods-loginAccess-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-loginAccess/Pods-loginAccess-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -228,7 +253,8 @@
 				903CE4672508E35300A4C6A6 /* ViewController.swift in Sources */,
 				903CE4632508E35300A4C6A6 /* AppDelegate.swift in Sources */,
 				903CE4652508E35300A4C6A6 /* SceneDelegate.swift in Sources */,
-				903CE4772508E53F00A4C6A6 /* ResultViewController.swift in Sources */,
+				903CE4772508E53F00A4C6A6 /* FacebookViewController.swift in Sources */,
+				90478F80250BA06400F86D26 /* GoogleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import GoogleSignIn
 
 
 @UIApplicationMain
@@ -22,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application,
             didFinishLaunchingWithOptions: launchOptions
         )
-
+        GIDSignIn.sharedInstance()?.clientID = "789654651730-uao6doirq2pajo920hm4djvt68v6j6fr.apps.googleusercontent.com" 
         return true
     }
           
